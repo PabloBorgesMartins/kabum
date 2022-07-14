@@ -51,8 +51,10 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       let response = {
         user: {
           id: 1,
-          fullName: "Jhon Doe",
+          name: "Jhon",
+          lastName: "Doe",
           email: data.email,
+          image: "https://www.allprodad.com/wp-content/uploads/2021/03/05-12-21-happy-people.jpg"
         },
         token: "hhhhhhhhhhhhhhh"
       }
@@ -73,8 +75,10 @@ const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
       let response = {
         user: {
           id: 1,
-          fullName: data.fullName,
+          name: data.name,
+          lastName: data.lastName,
           email: data.email,
+          image: data.image
         },
         token: "hhhhhhhhhhhhhhh"
       }

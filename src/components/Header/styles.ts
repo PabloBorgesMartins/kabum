@@ -43,34 +43,48 @@ export const SearchContainer = styled.div`
   }
 `;
 
-export const UserContainer = styled.div`
+export const SessionContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-
+  
   min-width: max-content;
   padding: 0 3rem;
+  font-size: .8rem;
+  color: var(--gray-100);
 
   img{
     width: 2.5rem;
     height: 2.5rem;
     border: 3px solid var(--blue-300);
     border-radius: 100%;
+    aspect-ratio: auto 1 / 1;
+    object-fit: cover;
   }
 
-  span{
-    font-size: .8rem;
+  a{
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  >span{
     margin-left: .5rem;
-    color: var(--gray-100);
       
     a{
-      color: var(--gray-100);
-      text-decoration: none;
       font-weight: bold;
+    }
+  }
 
-      &:hover{
-        text-decoration: underline;
-      }
+  >div{
+    margin-left: .5rem;
+
+    p{
+      font-weight: bold;
+      margin-bottom: .2rem;
     }
   }
 `;
@@ -83,9 +97,7 @@ export const ButtonContainer = styled.div`
   img{
     width: 1.5rem;
     cursor: pointer;
-    /* color: var(--gray-100); */
     transition: filter .2s;
-    color: red;
 
     :hover{
       filter: brightness(.8)
