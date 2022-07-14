@@ -28,7 +28,7 @@ export const SearchContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 2rem;
 
   span{
     cursor: pointer;
@@ -52,13 +52,14 @@ export const UserContainer = styled.div`
   padding: 0 3rem;
 
   img{
-    width: 3rem;
-    height: 3rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border: 3px solid var(--blue-300);
     border-radius: 100%;
   }
 
   span{
+    font-size: .8rem;
     margin-left: .5rem;
     color: var(--gray-100);
       
