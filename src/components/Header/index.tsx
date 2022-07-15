@@ -22,7 +22,16 @@ export function Header() {
   return (
     <Container>
       <Content>
-        <img src="/images/logo-kabum.svg" alt="logo kabum" />
+        <img
+          src="/images/logo-kabum.svg"
+          alt="logo kabum"
+          className="imgDesktop"
+        />
+        <img
+          src="/images/logo-kabum-mini.svg"
+          alt="logo kabum"
+          className="imgMobile"
+        />
         <SearchContainer>
           <SearchInput />
           {
@@ -51,11 +60,17 @@ export function Header() {
           }
         </SessionContainer>
         <ButtonContainer>
-          <img src="/images/sac.svg" alt="sac" />
-          <img src="/images/heart.svg" alt="favorite" />
-          <img src="/images/cart.svg" alt="shop cart" />
+          <a className="desktopIcon" title="SAC">
+            <img src="/images/sac.svg" alt="sac" />
+          </a>
+          <a className="desktopIcon" title="Favoritos">
+            <img src="/images/heart.svg" alt="favorite" />
+          </a>
+          <a title="Carrinho">
+            <img src="/images/cart.svg" alt="shop cart" />
+          </a>
         </ButtonContainer>
-      </Content >
-    </Container >
+      </Content>
+    </Container>
   )
 }

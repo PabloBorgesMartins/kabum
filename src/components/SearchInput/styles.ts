@@ -10,6 +10,22 @@ export const InputContainer = styled.div`
     right: -2rem;
     bottom: -.5rem;
     cursor: pointer;
+
+    @media(max-width: 1024px){
+      display: none;
+    }
+  }
+
+  .iconSearch{
+    display: none;
+    position: absolute;
+    right: .375rem;
+    bottom: .5rem;
+    cursor: pointer;
+
+    @media(max-width: 1024px){
+      display: unset;
+    }
   }
 `;
 

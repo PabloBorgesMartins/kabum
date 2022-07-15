@@ -7,6 +7,10 @@ export const Container = styled.header`
   align-items: center;
   background: var(--blue-400);
   padding: 1.5rem 0rem;
+
+  @media(max-width: 1024px){
+    padding: .75rem 0rem;
+  }
 `;
 
 export const Content = styled.div`
@@ -19,8 +23,21 @@ export const Content = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  img{
+  .imgDesktop{
     width: 10rem;
+
+    @media(max-width: 1024px){
+      display: none;
+    }
+  }
+
+  .imgMobile{
+    display: none;
+    width: 2rem;
+
+    @media(max-width: 1024px){
+      display: unset;
+    }
   }
 `;
 
@@ -29,6 +46,10 @@ export const SearchContainer = styled.div`
   flex-direction: column;
   width: 100%;
   padding: 0 2rem;
+
+  @media(max-width: 1024px){
+    padding: 0 0 0 2rem;
+  } 
 
   span{
     cursor: pointer;
@@ -52,6 +73,10 @@ export const SessionContainer = styled.div`
   padding: 0 3rem;
   font-size: .8rem;
   color: var(--gray-100);
+
+  @media(max-width: 1024px){
+    display: none;
+  } 
 
   img{
     width: 2.5rem;
@@ -94,6 +119,18 @@ export const ButtonContainer = styled.div`
   flex-direction: row;
   align-items: center;
 
+  .desktopIcon{
+    @media(max-width: 1024px){
+      display: none;
+    } 
+  }
+  
+  a{
+    & + a {
+      margin-left: 2rem;
+    }
+  }
+
   img{
     width: 1.5rem;
     cursor: pointer;
@@ -101,10 +138,6 @@ export const ButtonContainer = styled.div`
 
     :hover{
       filter: brightness(.8)
-    }
-
-    & + img{
-      margin-left: 2rem;
     }
   }
 `;
