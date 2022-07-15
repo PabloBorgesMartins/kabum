@@ -36,6 +36,6 @@ export const Input = styled.input`
   width: 100%;
 
   &::placeholder{
-    font-weight: bold;
+    font-weight: 600;
   }
 `;

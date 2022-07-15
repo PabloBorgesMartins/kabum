@@ -1,4 +1,12 @@
 import Head from 'next/head';
+import {
+  Container,
+  Content,
+  BillBoard,
+  BillBoardHeader,
+  BillBoardContent
+} from '../styles/home';
+import { StopWatch } from '../components/StopWatch';
 
 export default function Home() {
   return (
@@ -6,9 +14,30 @@ export default function Home() {
       <Head>
         <title>KaBuM!</title>
       </Head>
-      <h1>
-        Hello World
-      </h1>
+      <Container>
+        <Content>
+          <img src="/images/banner.svg" alt="Banner promocional" />
+          <BillBoard>
+            <BillBoardHeader>
+              <h1>
+                Black Friday
+              </h1>
+              <div>
+                <p>
+                  A PROMOÇÃO TERMINA EM:&nbsp;&nbsp;
+                </p>
+                <img src="/images/stopwatch.svg" alt="cronômetro" />
+                &nbsp;&nbsp;
+                <StopWatch />
+              </div>
+            </BillBoardHeader>
+            <BillBoardContent>
+
+            </BillBoardContent>
+          </BillBoard>
+
+        </Content>
+      </Container>
     </>
   )
 }

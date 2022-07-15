@@ -3,6 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   :root{
     --white: #ffffff;
+    --black: #000000;
 
     --gray-100: #fafafb;
     --gray-200: #f0eeee;
@@ -10,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
     --blue-300: #4781b5;
     --blue-400: #355eae;
-    --blue-800: #022448;
+    --blue-800: #002048;
 
     --orange-900: #ff6500;
   }
@@ -35,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, button{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 400;
   }
 
