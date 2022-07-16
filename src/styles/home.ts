@@ -9,6 +9,7 @@ export const Content = styled.div`
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 10vh;
 
   img{
     width: 100%;
@@ -76,4 +77,18 @@ export const BillBoardContent = styled.section`
   background: var(--gray-100);
 
   
+`;
+
+export const BillBoardFooter = styled.section`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 2rem 4rem 4rem;
+  background: var(--white);
+
+  img{
+    width: 200px;
+  }
 `;

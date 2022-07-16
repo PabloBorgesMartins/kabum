@@ -4,7 +4,8 @@ import {
   Content,
   BillBoard,
   BillBoardHeader,
-  BillBoardContent
+  BillBoardContent,
+  BillBoardFooter
 } from '../styles/home';
 import { StopWatch } from '../components/StopWatch';
 
@@ -34,8 +35,10 @@ export default function Home() {
             <BillBoardContent>
 
             </BillBoardContent>
+            <BillBoardFooter>
+              <img src="/images/ninja.svg" alt="ninja" />
+            </BillBoardFooter>  
           </BillBoard>
-
         </Content>
       </Container>
     </>
