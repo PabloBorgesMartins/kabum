@@ -1,17 +1,15 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  background: var(--black);
+  background: var(--blue-800);
 `;
 
 export const Content = styled.div`
-  background: var(--blue-800);
   max-width: 1280px;
-  width: 100%;
   margin: 0 auto;
   padding-bottom: 10vh;
 
-  img{
+  >img{
     width: 100%;
   }
 `;
@@ -20,7 +18,6 @@ export const BillBoard = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: 100%;
   margin-top: -100px;
 `;
 
@@ -31,7 +28,6 @@ export const BillBoardHeader = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  width: 100%;
   padding: 1.5rem 3rem;
   background: var(--orange-900);
 
@@ -83,12 +79,13 @@ export const BillBoardFooter = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   
+  gap: 1rem;
   padding: 2rem 4rem 4rem;
   background: var(--white);
 
-  img{
-    width: 200px;
+  @media(max-width: 720px){
+    flex-direction: column;
   }
 `;

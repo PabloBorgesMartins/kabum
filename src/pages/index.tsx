@@ -8,6 +8,7 @@ import {
   BillBoardFooter
 } from '../styles/home';
 import { StopWatch } from '../components/StopWatch';
+import { CardBanner } from '../components/CardBanner';
 
 export default function Home() {
   return (
@@ -36,11 +37,28 @@ export default function Home() {
 
             </BillBoardContent>
             <BillBoardFooter>
-              <img src="/images/ninja.svg" alt="ninja" />
-            </BillBoardFooter>  
+              <CardBanner
+                title='VENDA O SEU PRODUTO'
+                description='Venda o seu produto usado em nosso marketplace.'
+                imgUrl="/images/processor.svg"
+              />
+              <CardBanner
+                title='CONHEÇA OS PRODUTOS PRIME'
+                description='Fique por dentro de todos os nossoa benefícios.'
+                imgUrl="/images/ninja.svg"
+              />
+              <CardBanner
+                title='conheça nossos produtos de leilão'
+                description='As melhores oportunidades de compra.'
+                imgUrl="/images/razer.svg"
+              />
+            </BillBoardFooter>
           </BillBoard>
         </Content>
+
       </Container>
+
+
     </>
   )
 }
