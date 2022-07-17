@@ -39,7 +39,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <img src="/icons/star-fill.svg" className='starIcon' />
           <img src="/icons/star-fill.svg" className='starIcon' />
           <img src="/icons/star-fill.svg" className='starIcon' />
-          <img src="/icons/star-fill.svg" className='starIcon' />
+          <img src="/icons/star-half.svg" className='starIcon' />
           {" "}
           {product.ratio}
         </span>
@@ -58,7 +58,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {new Intl.NumberFormat('pt-BR', {
             style: "currency",
             currency: "BRL"
-          }).format(product.installmentAmount)}
+          }).format(product.cashValue)}
         </p>
         <p className='cashDescription'>À VISTA</p>
         <div className='productStatus'>

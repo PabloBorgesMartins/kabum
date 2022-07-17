@@ -49,6 +49,7 @@ export const Header = styled.div`
 
   .starIcon{
     width: 1rem;
+    margin-left: .1rem;
   }
 `;
 
