@@ -18,7 +18,11 @@ export const BillBoard = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-top: -100px;
+  margin-top: -200px;
+
+  @media(max-width: 1024px){
+    margin-top: -15vw;
+  }
 `;
 
 
@@ -89,5 +93,7 @@ export const BillBoardFooter = styled.section`
 
   @media(max-width: 720px){
     flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem 4rem;
   }
 `;
