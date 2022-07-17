@@ -7,8 +7,8 @@ export const InputContainer = styled.div`
   
   .iconHeaderSearch{
     position: absolute;
-    right: -2rem;
-    bottom: -.5rem;
+    right: -2.5rem;
+    bottom: -.45rem;
     cursor: pointer;
 
     @media(max-width: 1024px){
@@ -20,7 +20,7 @@ export const InputContainer = styled.div`
     display: none;
     position: absolute;
     right: .375rem;
-    bottom: .5rem;
+    bottom: .6rem;
     cursor: pointer;
 
     @media(max-width: 1024px){
