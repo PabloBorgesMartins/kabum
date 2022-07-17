@@ -69,10 +69,12 @@ export const BillBoardHeader = styled.header`
 `;
 
 export const BillBoardContent = styled.section`
-  height: 50vh;
   background: var(--gray-100);
+  padding: 2rem 0 4rem;
 
-  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
 export const BillBoardFooter = styled.section`

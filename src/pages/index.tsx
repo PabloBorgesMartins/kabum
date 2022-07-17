@@ -13,8 +13,15 @@ import {
 import { api } from '../services/api';
 import { StopWatch } from '../components/StopWatch';
 import { CardBanner } from '../components/CardBanner';
+import { ProductCard } from '../components/ProductCard';
+import { IProduct } from '../interfaces/product';
 
-export default function Home() {
+interface HomeProps {
+  products: IProduct[];
+}
+
+
+export default function Home({ products }: HomeProps) {
 
   return (
     <>
@@ -39,7 +46,14 @@ export default function Home() {
               </div>
             </BillBoardHeader>
             <BillBoardContent>
-
+              {
+                products.map(product => (
+                  <ProductCard
+                    key={product.id}
+                    product={product}
+                  />
+                ))
+              }
             </BillBoardContent>
             <BillBoardFooter>
               <CardBanner
@@ -64,7 +78,6 @@ export default function Home() {
     </>
   )
 }
-
 
 export const getStaticProps: GetStaticProps = async () => {
   let products = [
