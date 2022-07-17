@@ -22,17 +22,17 @@ export function ProductCard({ product }: ProductCardProps) {
           onClick={() => setIsLiked(!isLiked)}
           src={
             isLiked ?
-              "/images/heart-orange.svg" :
-              "/images/heart-outlined.svg"
+              "/icons/heart-orange.svg" :
+              "/icons/heart-outlined.svg"
           }
           className='heartIcon'
         />
         <span>
-          <img src="/images/star-fill.svg" className='starIcon' />
-          <img src="/images/star-fill.svg" className='starIcon' />
-          <img src="/images/star-fill.svg" className='starIcon' />
-          <img src="/images/star-fill.svg" className='starIcon' />
-          <img src="/images/star-fill.svg" className='starIcon' />
+          <img src="/icons/star-fill.svg" className='starIcon' />
+          <img src="/icons/star-fill.svg" className='starIcon' />
+          <img src="/icons/star-fill.svg" className='starIcon' />
+          <img src="/icons/star-fill.svg" className='starIcon' />
+          <img src="/icons/star-fill.svg" className='starIcon' />
           {" "}
           {product.ratio}
         </span>
@@ -48,7 +48,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {
             product.freeShipping && (
               <>
-                <img src="/images/truck.svg" alt="caminhão" />
+                <img src="/icons/truck.svg" alt="caminhão" />
                 FRETE GRÁTIS
               </>
             )
@@ -56,7 +56,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {
             product.openBox && (
               <>
-                <img src="/images/open-box.svg" alt="open box" />
+                <img src="/icons/open-box.svg" alt="open box" />
                 OPEN BOX
               </>
             )
@@ -64,7 +64,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
       </Body>
       <Button className='buttonProduct'>
-        <img src="/images/cart-white.svg" alt="shop cart" />
+        <img src="/icons/cart-white.svg" alt="shop cart" />
         COMPRAR
       </Button>
     </Container>

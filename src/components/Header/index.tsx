@@ -38,7 +38,7 @@ export function Header() {
             user && (
               <span>
                 <b>Enviar para:</b> Rua das Hortências, 295 - Boa Vista - Limeira SP
-                <img src="/images/arrow-down.svg" alt="arrow down" />
+                <img src="/icons/arrow-down.svg" alt="arrow down" />
               </span>
             )
           }
@@ -61,13 +61,13 @@ export function Header() {
         </SessionContainer>
         <ButtonContainer>
           <a className="desktopIcon" title="SAC">
-            <img src="/images/sac.svg" alt="sac" />
+            <img src="/icons/sac.svg" alt="sac" />
           </a>
           <a className="desktopIcon" title="Favoritos">
-            <img src="/images/heart.svg" alt="favorite" />
+            <img src="/icons/heart.svg" alt="favorite" />
           </a>
           <a title="Carrinho">
-            <img src="/images/cart.svg" alt="shop cart" />
+            <img src="/icons/cart.svg" alt="shop cart" />
           </a>
         </ButtonContainer>
       </Content>

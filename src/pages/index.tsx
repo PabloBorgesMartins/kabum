@@ -40,7 +40,7 @@ export default function Home({ products }: HomeProps) {
                 <p>
                   A PROMOÇÃO TERMINA EM:&nbsp;&nbsp;
                 </p>
-                <img src="/images/stopwatch.svg" alt="cronômetro" />
+                <img src="/icons/stopwatch.svg" alt="cronômetro" />
                 &nbsp;&nbsp;
                 <StopWatch />
               </div>
