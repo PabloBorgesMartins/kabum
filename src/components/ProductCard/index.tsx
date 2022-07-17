@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useState } from 'react';
 import {
   Container,
   Header,
@@ -48,8 +48,18 @@ export function ProductCard({ product }: ProductCardProps) {
       <Body>
         <h2 className='manufacturerName'>{product.manufacturer}</h2>
         <h1 className='productName'>{product.title}</h1>
-        <p className='installmentAmount'>R${product.installmentAmount}</p>
-        <p className='cashValue'>R${product.cashValue}</p>
+        <p className='installmentAmount'>
+          {new Intl.NumberFormat('pt-BR', {
+            style: "currency",
+            currency: "BRL"
+          }).format(product.installmentAmount)}
+        </p>
+        <p className='cashValue'>
+          {new Intl.NumberFormat('pt-BR', {
+            style: "currency",
+            currency: "BRL"
+          }).format(product.installmentAmount)}
+        </p>
         <p className='cashDescription'>À VISTA</p>
         <div className='productStatus'>
           {

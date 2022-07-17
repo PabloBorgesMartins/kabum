@@ -80,16 +80,13 @@ export default function Home({ products }: HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  let products = [
-
-  ];
+  let products = [] as IProduct[];
 
   try {
     let reponse = await api.get("products");
-    console.log("Produtos", reponse.data);
     products = reponse.data;
   } catch (error) {
-    console.log("error", error)
+    console.log("error fetch", error)
   }
 
   return {
