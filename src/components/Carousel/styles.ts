@@ -6,25 +6,21 @@ export const Swiper = styled(SwiperCarousel)`
   padding: 0 2rem;
 
   .swiper-button-next {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/566/566006.png');
+    background-image: url('/icons/chevron-right.svg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-    transform: rotate(90deg);
-
-    z-index: 10;
-    right: 0;
+    width: 1.25rem;
+    right: .25rem;
   }
 
   .swiper-button-prev {
-    background-image: url('https://cdn-icons-png.flaticon.com/512/566/566006.png');
+    background-image: url('/icons/chevron-left.svg');
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: center;
-    transform: rotate(-90deg);
-
-    z-index: 10;
-    left: 0;
+    width: 1.25rem;
+    left: .25rem;
   }
 
   .swiper-button-next::after {
