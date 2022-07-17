@@ -3,7 +3,14 @@ import styled from 'styled-components';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+
   border: 1px solid var(--gray-200);
+  cursor: pointer;
+
+  transition: transform 0.2s;
+  &:hover{
+    transform: scale(1.02);
+  }
 
   img{
     width: 100%;
