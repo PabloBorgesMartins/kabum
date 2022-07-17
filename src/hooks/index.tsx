@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import { AuthProvider } from './auth';
+import { CartProvider } from './cart';
 
 interface IAppProviderProps {
   children: ReactNode;
@@ -9,7 +10,9 @@ interface IAppProviderProps {
 const AppProvider: React.FC<IAppProviderProps> = ({ children }) => {
   return (
     <AuthProvider>
-      {children}
+      <CartProvider>
+        {children}
+      </CartProvider>
     </AuthProvider>
   );
 };

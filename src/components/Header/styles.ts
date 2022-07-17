@@ -114,18 +114,29 @@ export const SessionContainer = styled.div`
   }
 `;
 
+
+
 export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
 
   .desktopIcon{
+
     @media(max-width: 1024px){
       display: none;
     } 
   }
   
   a{
+    position: relative;
+    cursor: pointer;
+    
+    transition: filter .2s;
+    :hover{
+      filter: brightness(.8)
+    }
+
     & + a {
       margin-left: 2rem;
     }
@@ -133,11 +144,20 @@ export const ButtonContainer = styled.div`
 
   img{
     width: 1.5rem;
-    cursor: pointer;
-    transition: filter .2s;
-
-    :hover{
-      filter: brightness(.8)
-    }
   }
+`;
+
+export const Badge = styled.span`
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 100%;
+  background: var(--orange-900);
+
+  color: var(--white);
+  font-size: .8rem;
+  text-align: center;
+
+  position: absolute;
+  top: -.7rem;
+  right: -.7rem;
 `;

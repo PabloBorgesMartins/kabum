@@ -3,14 +3,17 @@ import {
   Content,
   SearchContainer,
   SessionContainer,
-  ButtonContainer
+  ButtonContainer,
+  Badge
 } from './styles';
 import { SearchInput } from '../SearchInput';
 import { useAuth } from '../../hooks/auth';
+import { useCart } from '../../hooks/cart';
 
 export function Header() {
 
   const { user, signIn, signOut } = useAuth();
+  const { products } = useCart();
 
   async function handleSignIn() {
     await signIn({
@@ -68,6 +71,11 @@ export function Header() {
           </a>
           <a title="Carrinho">
             <img src="/icons/cart.svg" alt="shop cart" />
+            {
+              !!products.length && (
+                <Badge>{products.length}</Badge>
+              )
+            }
           </a>
         </ButtonContainer>
       </Content>

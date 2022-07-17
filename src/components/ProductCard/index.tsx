@@ -1,11 +1,13 @@
-import { useState } from 'react';
-import { IProduct } from '../../interfaces/product';
+import { useCallback, useState } from 'react';
 import {
   Container,
   Header,
   Body,
   Button
 } from './styles';
+
+import { IProduct } from '../../interfaces/product';
+import { useCart } from '../../hooks/cart';
 
 interface ProductCardProps {
   product: IProduct;
@@ -14,6 +16,11 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
 
   const [isLiked, setIsLiked] = useState(false);
+  const { addProductToCart } = useCart();
+
+  function handlePurchaseProduct() {
+    addProductToCart(product);
+  };
 
   return (
     <Container>
@@ -63,7 +70,10 @@ export function ProductCard({ product }: ProductCardProps) {
           }
         </div>
       </Body>
-      <Button className='buttonProduct'>
+      <Button
+        className='buttonProduct'
+        onClick={handlePurchaseProduct}
+      >
         <img src="/icons/cart-white.svg" alt="shop cart" />
         COMPRAR
       </Button>
