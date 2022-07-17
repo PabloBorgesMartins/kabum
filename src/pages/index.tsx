@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import { GetStaticProps } from 'next';
+
 import {
   Container,
   Content,
@@ -7,10 +9,28 @@ import {
   BillBoardContent,
   BillBoardFooter
 } from '../styles/home';
+
+import { api } from '../services/api';
 import { StopWatch } from '../components/StopWatch';
 import { CardBanner } from '../components/CardBanner';
+import { useEffect } from 'react';
+
 
 export default function Home() {
+
+  useEffect(() => {
+    async function load() {
+      try {
+        let reponse = await api.get("products");
+        console.log("Produtos", reponse.data);
+      } catch (error) {
+        console.log("error", error)
+      }
+    }
+
+    load();
+  }, []);
+
   return (
     <>
       <Head>
@@ -55,10 +75,29 @@ export default function Home() {
             </BillBoardFooter>
           </BillBoard>
         </Content>
-
       </Container>
-
-
     </>
   )
+}
+
+
+export const getStaticProps: GetStaticProps = async () => {
+  let products = [
+
+  ];
+
+  try {
+    let reponse = await api.get("products");
+    console.log("Produtos", reponse.data);
+    products = reponse.data;
+  } catch (error) {
+    console.log("error", error)
+  }
+
+  return {
+    props: {
+      products
+    },
+    revalidate: 60, //1 minute
+  }
 }
