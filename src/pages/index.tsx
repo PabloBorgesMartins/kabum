@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-
 import {
   Container,
   Content,
@@ -13,13 +12,12 @@ import {
 import { api } from '../services/api';
 import { StopWatch } from '../components/StopWatch';
 import { CardBanner } from '../components/CardBanner';
-import { ProductCard } from '../components/ProductCard';
 import { IProduct } from '../interfaces/product';
+import { Carousel } from '../components/Carousel';
 
 interface HomeProps {
   products: IProduct[];
 }
-
 
 export default function Home({ products }: HomeProps) {
 
@@ -46,14 +44,7 @@ export default function Home({ products }: HomeProps) {
               </div>
             </BillBoardHeader>
             <BillBoardContent>
-              {
-                products.map(product => (
-                  <ProductCard
-                    key={product.id}
-                    product={product}
-                  />
-                ))
-              }
+              <Carousel products={products} />
             </BillBoardContent>
             <BillBoardFooter>
               <CardBanner

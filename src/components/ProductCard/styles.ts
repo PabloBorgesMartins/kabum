@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: var(--white);
   width: 13.5rem;
+  height: 100%;
 
   display: grid;
   grid-template-rows: auto auto auto auto;
