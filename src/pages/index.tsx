@@ -13,23 +13,8 @@ import {
 import { api } from '../services/api';
 import { StopWatch } from '../components/StopWatch';
 import { CardBanner } from '../components/CardBanner';
-import { useEffect } from 'react';
-
 
 export default function Home() {
-
-  useEffect(() => {
-    async function load() {
-      try {
-        let reponse = await api.get("products");
-        console.log("Produtos", reponse.data);
-      } catch (error) {
-        console.log("error", error)
-      }
-    }
-
-    load();
-  }, []);
 
   return (
     <>
