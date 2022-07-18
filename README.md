@@ -5,7 +5,7 @@
 ## :memo: About ##
 
 - This present project was developed for KaBuM challenge.
-- Mock utilizado: [mockapi.io](https://mockapi.io)
+- Mock used: [mockapi.io](https://mockapi.io)
 
 ## :rocket: Main Technologies ##
 
