@@ -37,6 +37,10 @@ export const Header = styled.div`
   
   padding: .5rem;
 
+  picture{
+    display: inline;
+  }
+
   .heartIcon{
     width: 1.5rem;
     cursor: pointer;

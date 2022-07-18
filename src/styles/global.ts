@@ -46,6 +46,10 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 600;
   }
 
+  picture{
+    display: flex;
+  }
+
   button{
     cursor: pointer;
   }

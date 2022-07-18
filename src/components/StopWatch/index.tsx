@@ -26,7 +26,7 @@ export function StopWatch() {
     let minutes = (~~(returnRemainder() % (60 * 60) / 60)).toString().padStart(2, '0');
     let seconds = (~~(returnRemainder() % (60 * 60) % 60)).toString().padStart(2, '0');
     return hour + ":" + minutes + ":" + seconds;
-  }, [time]);
+  }, [returnRemainder]);
 
   return (
     <Container>

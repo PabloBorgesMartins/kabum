@@ -52,14 +52,18 @@ export const SearchContainer = styled.div`
   } 
 
   span{
+    /* display: flex; */
     cursor: pointer;
     font-size: .8rem;
     color: var(--gray-100);
     margin-top: .5rem;
 
-    img{
-      margin-left: .25rem;
-      width: 1rem;
+    picture{
+      display: inline;
+      img{
+        margin-left: .25rem;
+        width: 1rem;
+      }
     }
   }
 `;

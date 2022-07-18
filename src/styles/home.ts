@@ -9,8 +9,10 @@ export const Content = styled.div`
   margin: 0 auto;
   padding-bottom: 10vh;
 
-  >img{
-    width: 100%;
+  >picture{
+    img{
+      width: 100%;
+    }
   }
 `;
 

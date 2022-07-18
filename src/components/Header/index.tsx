@@ -25,29 +25,44 @@ export function Header() {
   return (
     <Container>
       <Content>
-        <img
-          src="/images/logo-kabum.svg"
-          alt="logo kabum"
-          className="imgDesktop"
-        />
-        <img
-          src="/images/logo-kabum-mini.svg"
-          alt="logo kabum"
-          className="imgMobile"
-        />
+        <picture>
+          <source srcSet="/images/logo-kabum.svg" type="image/svg+xml" />
+          <img
+            src="/images/logo-kabum.svg"
+            alt="logo kabum"
+            className="imgDesktop"
+          />
+        </picture>
+        <picture>
+          <source srcSet="/images/logo-kabum-mini.svg" type="image/svg+xml" />
+          <img
+            src="/images/logo-kabum-mini.svg"
+            alt="logo kabum"
+            className="imgMobile"
+          />
+        </picture>
         <SearchContainer>
           <SearchInput />
           {
             user && (
               <span>
                 <b>Enviar para:</b> Rua das Hortências, 295 - Boa Vista - Limeira SP
-                <img src="/icons/arrow-down.svg" alt="arrow down" />
+                <picture>
+                  <source srcSet="/icons/arrow-down.svg" type="image/svg+xml" />
+                  <img src="/icons/arrow-down.svg" alt="arrow down" />
+                </picture>
               </span>
             )
           }
         </SearchContainer>
         <SessionContainer>
-          <img src={user ? user.image : "/images/person.png"} alt="user photo" />
+          <picture>
+            <source srcSet={user ? user.image : "/images/person.png"} type="image/svg+xml" />
+            <img
+              src={user ? user.image : "/images/person.png"}
+              alt="user photo"
+            />
+          </picture>
           {
             user ? (
               <div>
@@ -64,13 +79,22 @@ export function Header() {
         </SessionContainer>
         <ButtonContainer>
           <a className="desktopIcon" title="SAC">
-            <img src="/icons/sac.svg" alt="sac" />
+            <picture>
+              <source srcSet="/icons/sac.svg" type="image/svg+xml" />
+              <img src="/icons/sac.svg" alt="sac" />
+            </picture>
           </a>
           <a className="desktopIcon" title="Favoritos">
-            <img src="/icons/heart.svg" alt="favorite" />
+            <picture>
+              <source srcSet="/icons/heart.svg" type="image/svg+xml" />
+              <img src="/icons/heart.svg" alt="favorite" />
+            </picture>
           </a>
           <a title="Carrinho">
-            <img src="/icons/cart.svg" alt="shop cart" />
+            <picture>
+              <source srcSet="/icons/cart.svg" type="image/svg+xml" />
+              <img src="/icons/cart.svg" alt="shop cart" />
+            </picture>
             {
               !!products.length && (
                 <Badge>{products.length}</Badge>

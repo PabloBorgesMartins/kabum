@@ -28,7 +28,10 @@ export default function Home({ products }: HomeProps) {
       </Head>
       <Container>
         <Content>
-          <img src="/images/banner.svg" alt="Banner promocional" />
+          <picture>
+            <source srcSet="/images/banner.svg" type="image/svg+xml" />
+            <img src="/images/banner.svg" alt="Banner promocional" />
+          </picture>
           <BillBoard>
             <BillBoardHeader>
               <h1>
@@ -38,7 +41,10 @@ export default function Home({ products }: HomeProps) {
                 <p>
                   A PROMOÇÃO TERMINA EM:&nbsp;&nbsp;
                 </p>
-                <img src="/icons/stopwatch.svg" alt="cronômetro" />
+                <picture>
+                  <source srcSet="/icons/stopwatch.svg" type="image/svg+xml" />
+                  <img src="/icons/stopwatch.svg" alt="cronômetro" />
+                </picture>
                 &nbsp;&nbsp;
                 <StopWatch />
               </div>

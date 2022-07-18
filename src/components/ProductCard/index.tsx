@@ -18,33 +18,62 @@ export function ProductCard({ product }: ProductCardProps) {
   const [isLiked, setIsLiked] = useState(false);
   const { addProductToCart } = useCart();
 
-  function handlePurchaseProduct() {
+  const handlePurchaseProduct = () => {
     addProductToCart(product);
   };
 
   return (
     <Container>
       <Header className="headerCard">
-        <img
-          onClick={() => setIsLiked(!isLiked)}
-          src={
-            isLiked ?
-              "/icons/heart-orange.svg" :
-              "/icons/heart-outlined.svg"
-          }
-          className='heartIcon'
-        />
+        <picture>
+          <source
+            srcSet={
+              isLiked ?
+                "/icons/heart-orange.svg" :
+                "/icons/heart-outlined.svg"
+            }
+            type="image/svg+xml"
+          />
+          <img
+            onClick={() => setIsLiked(!isLiked)}
+            src={
+              isLiked ?
+                "/icons/heart-orange.svg" :
+                "/icons/heart-outlined.svg"
+            }
+            className='heartIcon'
+            alt="Favorito"
+          />
+        </picture>
         <span>
-          <img src="/icons/star-fill.svg" className='starIcon' />
-          <img src="/icons/star-fill.svg" className='starIcon' />
-          <img src="/icons/star-fill.svg" className='starIcon' />
-          <img src="/icons/star-fill.svg" className='starIcon' />
-          <img src="/icons/star-half.svg" className='starIcon' />
+          <picture>
+            <source srcSet="/icons/star-fill.svg" type="image/svg+xml" />
+            <img src="/icons/star-fill.svg" alt="estrela cheia" className='starIcon' />
+          </picture>
+          <picture>
+            <source srcSet="/icons/star-fill.svg" type="image/svg+xml" />
+            <img src="/icons/star-fill.svg" alt="estrela cheia" className='starIcon' />
+          </picture>
+          <picture>
+            <source srcSet="/icons/star-fill.svg" type="image/svg+xml" />
+            <img src="/icons/star-fill.svg" alt="estrela cheia" className='starIcon' />
+          </picture>
+          <picture>
+            <source srcSet="/icons/star-fill.svg" type="image/svg+xml" />
+            <img src="/icons/star-fill.svg" alt="estrela cheia" className='starIcon' />
+          </picture>
+          <picture>
+            <source srcSet="/icons/star-fill.svg" type="image/svg+xml" />
+            <img src="/icons/star-half.svg" alt="estrela meio cheia" className='starIcon' />
+          </picture>
           {" "}
           {product.ratio}
         </span>
       </Header>
-      <img className='productImage' src={product.image} alt="Imagem de produto" />
+      <picture className='productImage'>
+        <source srcSet={product.image} type="image/svg+xml" />
+        <img src={product.image} alt="Imagem de produto" />
+      </picture>
       <Body>
         <h2 className='manufacturerName'>{product.manufacturer}</h2>
         <h1 className='productName'>{product.title}</h1>
@@ -65,7 +94,10 @@ export function ProductCard({ product }: ProductCardProps) {
           {
             product.freeShipping && (
               <>
-                <img src="/icons/truck.svg" alt="caminhão" />
+                <picture>
+                  <source srcSet="/icons/truck.svg" type="image/svg+xml" />
+                  <img src="/icons/truck.svg" alt="caminhão" />
+                </picture>
                 FRETE GRÁTIS
               </>
             )
@@ -73,7 +105,10 @@ export function ProductCard({ product }: ProductCardProps) {
           {
             product.openBox && (
               <>
-                <img src="/icons/open-box.svg" alt="open box" />
+                <picture>
+                  <source srcSet="/icons/open-box.svg" type="image/svg+xml" />
+                  <img src="/icons/open-box.svg" alt="open box" />
+                </picture>
                 OPEN BOX
               </>
             )
@@ -84,7 +119,10 @@ export function ProductCard({ product }: ProductCardProps) {
         className='buttonProduct'
         onClick={handlePurchaseProduct}
       >
-        <img src="/icons/cart-white.svg" alt="shop cart" />
+        <picture>
+          <source srcSet="/icons/cart-white.svg" type="image/svg+xml" />
+          <img src="/icons/cart-white.svg" alt="shop cart" />
+        </picture>
         COMPRAR
       </Button>
     </Container>

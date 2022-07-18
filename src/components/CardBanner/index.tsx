@@ -16,7 +16,10 @@ export function CardBanner({ title, description, imgUrl }: CardBannerProps) {
         <h1>{title}</h1>
         <p>{description}</p>
       </Header>
-      <img src={imgUrl} alt="Banner Promocional" />
+      <picture>
+        <source srcSet={imgUrl} type="image/svg+xml" />
+        <img src={imgUrl} alt={`Banner Promocional ${title}`} />
+      </picture>
     </Container>
   )
 }

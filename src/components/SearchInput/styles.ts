@@ -17,6 +17,7 @@ export const InputContainer = styled.div`
   }
 
   .iconSearch{
+    width: 1rem;
     display: none;
     position: absolute;
     right: .375rem;
