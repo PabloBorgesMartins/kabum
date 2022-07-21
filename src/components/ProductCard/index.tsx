@@ -63,7 +63,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <img src="/icons/star-fill.svg" alt="estrela cheia" className='starIcon' />
           </picture>
           <picture>
-            <source srcSet="/icons/star-fill.svg" type="image/svg+xml" />
+            <source srcSet="/icons/star-half.svg" type="image/svg+xml" />
             <img src="/icons/star-half.svg" alt="estrela meio cheia" className='starIcon' />
           </picture>
           {" "}
